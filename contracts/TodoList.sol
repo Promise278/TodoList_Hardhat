@@ -13,7 +13,7 @@ contract TodoList {
     uint256 private nextId;
 
     function addTask(string memory _todo) public {
-        tasks.push(Task({id: nextId, todo: _todo, completed: false, createdAt: block.timestamp}));
+        tasks.push(Task({id: nextId, todo: _todo, completed: false, createdAt: block.timestamp})); nextId++;
     }
 
     function getTask(uint256 _index) public view returns (Task memory) {
