@@ -20,10 +20,6 @@ contract TodoList {
         return tasks[_index];
     }
 
-    function getAllTasks() public view returns (Task[] memory) {
-        return tasks;
-    }
-
     function toggleCompleted(uint256 _index) public {
         Task storage task = tasks[_index];
         task.completed = !task.completed;
